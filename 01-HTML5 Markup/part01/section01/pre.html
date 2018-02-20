@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>pre 요소</title>
+</head>
+<body>
+    <section>
+        <h1>롤오버 이미지</h1>
+        <p>자바스크립트 롤오버 이미지 소스입니다.</p>
+        <pre><code>
+            function toggleImg(imgNode, onOff) {
+                var imgFileName = imgNode.src;
+                if(onOff == "on") {
+                    if(imgFileName.lastIndexOf("_ov.gif") < 0) {
+                        imgNode.src = imgFileName.substring(0, imgFileName.lastIndexOf(".gif")) + "_ov.gif";
+                    }
+                } else {
+                    if(imgFileName.lastIndexOf("_ov.gif") > 0) {
+                        imgNode.src = imgFileName.substring(0, imgFileName.lastIndexOf(".gif") - 3) + "_ov.gif";
+                    }
+                }
+            0}
+        </code></pre>
+    </section>
+    
+</body>
+</html>
